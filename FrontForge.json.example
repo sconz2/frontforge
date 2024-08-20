@@ -1,0 +1,33 @@
+{
+	"vm": {
+		"ip": "192.168.56.57",
+		"memory": 1028,
+		"cpus": 2,
+		"providor": "virtualbox"
+	},
+	"folders": [
+		{
+			"map": "{host project folder}",
+			"to": "{vm project folder}"
+		}
+	],
+	"sites": [
+		{
+			"map": "{url}",
+			"to": "{vm project folder}",
+			"proxy": {
+				"host": "127.0.0.1",
+				"port": 5000
+			}
+		}
+	],
+	"databases": [
+		"frontforge"
+	],
+	"ports": [
+		{
+			"send": 33060,
+			"to": 3360
+		}
+	]
+}
