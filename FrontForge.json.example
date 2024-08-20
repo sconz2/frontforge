@@ -3,7 +3,7 @@
 		"ip": "192.168.56.57",
 		"memory": 1028,
 		"cpus": 2,
-		"providor": "virtualbox"
+		"provider": "virtualbox"
 	},
 	"folders": [
 		{
