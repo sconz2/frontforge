@@ -8,7 +8,7 @@ export NVM_DIR="$HOME/.nvm"
 command="npm run dev -- --host=$3 --port=$4"
 
 echo "Starting tmux server..."
-echo "tmux -L frontendforge new -s $1 -c $2 -d \"$command\""
-tmux -L frontendforge new -s $1 -c $2 -d "$command"
+echo "tmux -L frontforge new -s $1 -c $2 -d \"$command\""
+tmux -L frontforge new -s $1 -c $2 -d "$command"
 echo "Sessions started:"
-tmux -L frontendforge ls
+tmux -L frontforge ls

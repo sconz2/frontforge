@@ -118,7 +118,7 @@ Vagrant.configure('2') do |config|
       end
 
       #start the project in dev mode
-      config.vm.provision 'shell' do |s|
+      config.vm.provision 'shell', run: 'always', privileged: false do |s|
         s.name = 'Running Site Dev Mode: ' + site['map']
         s.path = scripts_dir + '/create_tmux_session.sh'
         s.args = [
@@ -127,7 +127,6 @@ Vagrant.configure('2') do |config|
           site['proxy']['host'],
           site['proxy']['port']
         ]
-        s.privileged = false
       end
     end
   end
